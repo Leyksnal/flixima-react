@@ -13,7 +13,6 @@ export default function Slide() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    centerMode: true
   }
 
   return (
@@ -39,7 +38,7 @@ export default function Slide() {
 }
 
 const Container = styled(Slider)`
-  width: 90%;
+  width: 100%;
   margin-top: 20px;
 
   ul li button{
@@ -68,7 +67,7 @@ const Myslide = styled.div`
   border-radius: 20px;
   
   :hover{
-    border: 3px solid #fff;
+    border: 1px solid #fff;
   }
 `;
 
@@ -77,11 +76,10 @@ const Myimage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 5px;
 `;
 
 const Holder = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
 `;

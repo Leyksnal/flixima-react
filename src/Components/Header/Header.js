@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import {FaBars, FaTimes} from 'react-icons/fa'
+import Sidebar from '../Sidebar/Sidebar'
 
 export default function Header() {
 
