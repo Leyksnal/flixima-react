@@ -16,30 +16,45 @@ export default function Slide() {
   }
 
   return (
-    <Holder>
-      <Container>
-        <Slider {...settings}>
-          <Myslide>
-            <Myimage src="/Assets/images/slider-badag.jpg"/>
-          </Myslide>
-          <Myslide>
-            <Myimage src="/Assets/images/slider-badging.jpg"/>
-          </Myslide>
-          <Myslide>
-            <Myimage src="/Assets/images/slider-scale.jpg"/>
-          </Myslide>
-          <Myslide>
-            <Myimage src="/Assets/images/slider-scales.jpg"/>
-          </Myslide>
-        </Slider>
-      </Container>
-    </Holder>
+    <div>
+      <Carousel {...settings}>
+        <Myslide>
+          <a>
+            <img src="/Assets/images/slider-badag.jpg"/>
+          </a>
+        </Myslide>
+        <Myslide>
+          <a>
+            <img src="/Assets/images/slider-badging.jpg"/>
+          </a>
+        </Myslide>
+        <Myslide>
+          <a>
+            <img src="/Assets/images/slider-scale.jpg"/>
+          </a>
+        </Myslide>
+        <Myslide>
+          <a>
+            <img src="/Assets/images/slider-scales.jpg"/>
+          </a>
+        </Myslide>
+      </Carousel>
+    </div>
   )
 }
 
-const Container = styled(Slider)`
-  width: 100%;
-  margin-top: 20px;
+const Carousel = styled(Slider)`
+  overflow: hidden;
+  & > button{
+    height: 100%;
+    width: 5vw;
+    z-index: 1;
+    opacity: 0;
+
+    :hover{
+      opacity: 1;
+    }
+  }
 
   ul li button{
     ::before{
@@ -50,36 +65,26 @@ const Container = styled(Slider)`
     li.slick-active button::before{
       color: #fff;
     }
-
-    .slick-list{
-      overflow: visible;
-    }
-
-    button{
-      z-index: 1;
-    }
   }
 `;
 
 const Myslide = styled.div`
   background-color: darkcyan;
-  height: 400px;
-  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+
+  a{
+    position: relative;
+    display: block;
+    box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+  }
+
+  img{
+    width: 100%;
+    height: 100%;
+  }
   
   :hover{
     border: 1px solid #fff;
   }
-`;
-
-
-const Myimage = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 5px;
-`;
-
-const Holder = styled.div`
-  display: flex;
-  justify-content: center;
 `;

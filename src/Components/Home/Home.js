@@ -1,11 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
+import Explore from '../Exolore/Explore';
 import Slide from '../Slide/Slide'
+import View from '../View/View';
 
 export default function Home() {
   return (
     <Container>
         <Slide/>
+        <View/>
+        <Explore/>
     </Container>
   )
 }
@@ -27,5 +31,6 @@ const Container = styled.div`
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        z-index: -1;
     }
 `;
