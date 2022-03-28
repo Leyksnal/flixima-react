@@ -1,28 +1,38 @@
 import React from 'react'
 import styled from 'styled-components'
+import data from '../Data.json'
+import {Link} from 'react-router-dom'
 
 export default function Explore() {
   return (
-    <Container>
-        <h3>
-            <strong>Showing At The Cinema</strong>
-        </h3>
-        <Wrap>
-            <Inner>
-                <img src="/Assets/images/Viewers-pixar.png" alt="" />
-            </Inner>
-        </Wrap>
-    </Container>
+      <Wall>
+        <Container>
+            <h3>
+                <strong>Showing At The Cinema</strong>
+            </h3>
+            <Wrap>
+                {data?.map((props)=>(
+                    <Inner key={props.id1} to={`/detail/${props.id1}`}>
+                        <img src={props.cardImg} alt="" />
+                    </Inner>
+                ))}
+            </Wrap>
+        </Container>
+      </Wall>
   )
 }
 
-
+const Wall = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
 const Container = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 98%;
 
     h3{
         color: #fff;
@@ -43,7 +53,9 @@ const Wrap = styled.div`
     }
 
 `;
-const Inner = styled.div`
+
+
+const Inner = styled(Link)`
     height: 200px;
     width: 100%;
     border-radius: 5px;
