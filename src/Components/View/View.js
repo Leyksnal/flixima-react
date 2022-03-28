@@ -62,7 +62,7 @@ const Container = styled.div`
 `;
 const Holder = styled.div`
     border-radius: 10px;
-    height: 100%;
+    height: 100px;
     box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, rgb(0 0 0 / 73%) 0px 16px 10px -10px;
     border: solid 3px #fff;
     position: relative;
@@ -73,7 +73,7 @@ const Holder = styled.div`
         width: 100%;
         object-fit: cover;
         opacity: 1;
-        /* position: absolute; */
+        position: absolute;
         z-index: 1;
         top: 0;
     }

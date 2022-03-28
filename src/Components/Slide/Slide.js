@@ -20,22 +20,22 @@ export default function Slide() {
       <Carousel {...settings}>
         <Myslide>
           <a>
-            <img src="/Assets/images/slider-badag.jpg"/>
+            <img src="/Assets/images/slider-badag.jpg" alt="badag"/>
           </a>
         </Myslide>
         <Myslide>
           <a>
-            <img src="/Assets/images/slider-badging.jpg"/>
+            <img src="/Assets/images/slider-badging.jpg" alt="badag"/>
           </a>
         </Myslide>
         <Myslide>
           <a>
-            <img src="/Assets/images/slider-scale.jpg"/>
+            <img src="/Assets/images/slider-scale.jpg" alt="badag"/>
           </a>
         </Myslide>
         <Myslide>
           <a>
-            <img src="/Assets/images/slider-scales.jpg"/>
+            <img src="/Assets/images/slider-scales.jpg" alt="badag"/>
           </a>
         </Myslide>
       </Carousel>

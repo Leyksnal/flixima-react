@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import {FaBars, FaTimes} from 'react-icons/fa'
+import {Link}  from 'react-router-dom'
 
 export default function Header() {
 
@@ -19,27 +20,27 @@ export default function Header() {
 
         <Navigation>
           <Navs>
-            <Nav>
+            <Nav to='/'>
               <Icon src="/Assets/images/home-icon.svg" alt="" />
               <span>Home</span>
             </Nav>
-            <Nav>
+            <Nav to='/'>
               <Icon src="/Assets/images/search-icon.svg" alt="" />
               <span>Search</span>
             </Nav>
-            <Nav>
+            <Nav to='/watchlist'>
               <Icon src="/Assets/images/watchlist-icon.svg" alt="" />
               <span>Watchlist</span>
-            </Nav>
-            <Nav>
+            </Nav >
+            <Nav to='/original'>
               <Icon src="/Assets/images/original-icon.svg" alt="" />
               <span>Original</span>
             </Nav>
-            <Nav>
+            <Nav to='/movies'>
               <Icon src="/Assets/images/movie-icon.svg" alt="" />
               <span>Movies</span>
             </Nav>
-            <Nav>
+            <Nav to='/series'>
               <Icon src="/Assets/images/series-icon.svg" alt="" />
               <span>Series</span>
             </Nav>
@@ -97,7 +98,7 @@ const Navs = styled.div`
   width: 580px;
   justify-content: space-between;
 `;
-const Nav = styled.div`
+const Nav = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
