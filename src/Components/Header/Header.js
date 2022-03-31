@@ -99,6 +99,7 @@ const Navs = styled.div`
   justify-content: space-between;
 `;
 const Nav = styled(Link)`
+  text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
