@@ -24,7 +24,10 @@ export default function Detail() {
   return (
     <Container>
         <Bg>
-            <img src={getData.cardImg} alt="" />
+            <img src={getData.backgroundImg}/>
+        </Bg>
+        <Content>
+            <img src={getData.titleImg} alt="" />
             <Action>
                 <Play><BsPlayFill size={'30px'}/>Play</Play>
                 <Trailer><BsPlay size={'30px'} />Trailer</Trailer>
@@ -32,27 +35,42 @@ export default function Detail() {
                 <Group><ImMakeGroup size={'20px'}/></Group>
                 <Back to={"/"}><FaReply size={'25px'}/></Back>
             </Action>
-            <Subtitle>2018 • 1h 58m • Science Fiction, Family, Animation, Action-Adventure</Subtitle>
-            <Info>While Helen is called on to lead a campaign to bring back the Supers, Bob navigates the day-to-day heroics of “normal” life at home with Violet, Dash and Jack-Jack, whose superpowers are about to be discovered. Their mission is derailed, however, when a new villain emerges with a brilliant and dangerous plot that threatens everything. But with Frozone by their side, the Parrs can take on anything.</Info>
-        </Bg>
+            <Subtitle>{getData.subTitle}</Subtitle>
+            <Info>{getData.description}</Info>
+        </Content>
     </Container>
   )
 }
 
 
+const Bg = styled.div`
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0.9;
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+`;
 const Container = styled.div`
     height: 100vh;
     width: 100%;
     position: relative;
-    background-image: ();
+    /* background-image: url("https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/B409C2A425D58C32D822EB633C7CAE3DC910DC2FC62D2B1807A0BB092C531E9A/scale?width=1440&aspectRatio=1.78&format=jpeg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
     display: flex;
     align-items: center;
 `;
 
-const Bg = styled.div`
+const Content = styled.div`
 
     /* background-color: darkcyan; */
     width: 450px;
@@ -63,11 +81,11 @@ const Bg = styled.div`
     :hover{
     }
     img{
-        width: 90%;
+        width: 100%;
         height: 100%;
-        margin-left: 100px;
+        /* margin-left: 100px; */
         border-radius: 10px;
-        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        box-shadow: rgb(38, 57, 100) 10px 20px 10px -10px;
     }
 `;
 

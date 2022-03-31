@@ -46,7 +46,7 @@ export default function Header() {
             </Nav>
           </Navs>
           <Avatar>
-            <Pix />
+            <Pix src="/Assets/images/ak.jpg"/>
           </Avatar>
         </Navigation>
         <Bars>
@@ -134,12 +134,16 @@ const Nav = styled(Link)`
 const Icon = styled.img`
   width: 25px;
 `;
-const Pix = styled.img``;
+const Pix = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+`;
 const Avatar = styled.div`
   height: 55px;
   width: 55px;
   background-color: darkcyan;
-  border-radius: 50%;
 `;
 
 const Bars = styled.div`
