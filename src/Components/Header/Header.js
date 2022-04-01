@@ -143,7 +143,6 @@ const Pix = styled.img`
 const Avatar = styled.div`
   height: 55px;
   width: 55px;
-  background-color: darkcyan;
 `;
 
 const Bars = styled.div`
