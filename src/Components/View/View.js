@@ -74,7 +74,7 @@ const Holder = styled.div`
         object-fit: cover;
         opacity: 1;
         position: absolute;
-        z-index: 1;
+        /* z-index: 1; */
         top: 0;
     }
 
